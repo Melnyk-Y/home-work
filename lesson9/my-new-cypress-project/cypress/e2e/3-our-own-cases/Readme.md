@@ -1,9 +1,8 @@
-SAUCEDEMO PROJECT
+# Saucedemo project
 
+## ENVIRONMENT SETUP
 
-ENVIRONMENT SETUP
-
-1.Installing Node.js and npm
+1. Installing Node.js and npm
 
 If you don't have Cypress installed, first, make sure Node.js and npm are installed.
 
@@ -13,13 +12,11 @@ If you don't have Cypress installed, first, make sure Node.js and npm are instal
 
 To install Node.js and npm. Download it from here https://nodejs.org/en
 
-   
-
-2.Installing a Code Editor
+2. Installing a Code Editor
 
 We recommend using Visual Studio Code. Download it from here https://code.visualstudio.com/
 
-3.Installing Cypress
+3. Installing Cypress
 
 Open your terminal and run the following commands:
 
@@ -33,39 +30,38 @@ Open your terminal and run the following commands:
       # Install Cypress
       npm install cypress
 
+## TEST EXECUTION
 
-TEST EXECUTION
+The following steps should get you set up for running Selenium tests locally on your machine:
 
-1.The following steps should get you set up for running Selenium tests locally on your machine:
+1. Clone repository to your local machine 
 
-2.Clone repository to your local machine 
+2. Open up a terminal and navigate to the root directory of the repository.
 
-3.Open up a terminal and navigate to the root directory of the repository.
+3. Open the Cypress Test Runner with the command:
 
-4.Open the Cypress Test Runner with the command:
-
-      # Open Cypress Test Runner 
+      #Open Cypress Test Runner 
       npx cypress open
 
-
-TEST REPORTING
+## TEST REPORTING
 
 JUnit is widely used for CI/CD pipelines. To integrate JUnit, first install the Mocha JUnit reporter:
 
-    # Install Mocha JUnit reporter
+    #Install Mocha JUnit reporter
     npm install mocha-junit-reporter --save-dev
     
 Modify the Cypress configuration to use the JUnit reporter:
 
     # cypress.json
     {
-      "reporter": "mocha-junit-reporter"   //Add it to cypress.config.js
+      "reporter": "mocha-junit-reporter"   // Add it to cypress.config.js file
     }
     
 Run your tests again and look for the JUnit report file.
 
      npx cypress run // Command to run tests
-     npx cypress run --spec "cypress/e2e/3-our-own-cases/finaltestcases.cy.js" //Command to run tests for specific file
+     npx cypress run --spec "cypress/e2e/3-our-own-cases/finaltestcases.cy.js"      
+     Command to run tests for specific file
 
 
 Open "test-results.xml" file for results
@@ -89,6 +85,3 @@ Open "mochawesome-report" forlder
 Open "mochawesome.html" file via Reveal in Finder
 
 Open "mochawesome.html" file in Finder
-
-
-
